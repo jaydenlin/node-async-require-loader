@@ -1,0 +1,16 @@
+{
+  "name": "node-async-require-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jayden Lin",
+  "license": "ISC",
+  "dependencies": {
+    "fetch": "0.3.6",
+    "loader-utils": "0.2.12",
+    "react-templates": "0.3.2"
+  }
+}
