@@ -6,7 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jayden Lin",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jaydenlin/node-async-require-loader.git"
+  },
+  "keywords": [
+    "react-templates",
+    "node",
+    "server"
+  ],
+  "author": "Jayden Lin <jayden.weiyu@gmail.com> (http://www.jdlin.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaydenlin/node-async-require-loader/issues"
+  },
+  "homepage": "https://github.com/jaydenlin/node-async-require-loader",
   "license": "ISC",
   "dependencies": {
     "fetch": "0.3.6",
