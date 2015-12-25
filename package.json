@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm link node-async-require-loader && mocha test/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,10 +21,14 @@
     "url": "https://github.com/jaydenlin/node-async-require-loader/issues"
   },
   "homepage": "https://github.com/jaydenlin/node-async-require-loader",
-  "license": "ISC",
   "dependencies": {
     "fetch": "0.3.6",
     "loader-utils": "0.2.12",
+    "mocha": "2.3.4",
     "react-templates": "0.3.2"
+  },
+  "devDependencies": {
+    "shelljs": "0.5.3",
+    "webpack": "1.12.9"
   }
 }
