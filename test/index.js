@@ -34,4 +34,12 @@ describe('Test the built result of the remote content ', function() {
 		var distModule = require('../examples/example04/dist/js/test.js');
 		assert.equal(typeof distModule, "object");
 	});
+
+	it.only('[example 05] when custom preParser is set, should return correct js using the required .ajs file', function() {
+
+		rm('-rf', './examples/example05/dist/');
+		exec('node node_modules/webpack/bin/webpack.js -p --config examples/example05/webpack.config.js --content-base examples/example05/')
+		var distModule = require('../examples/example05/dist/js/test.js');
+		assert.equal(typeof distModule, "object");
+	});
 });
