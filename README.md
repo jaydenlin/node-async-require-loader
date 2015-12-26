@@ -15,7 +15,7 @@ I made up the file with `.ajs` extention.
 
 ### Highlight
 * Provid the `PreParser` config for parsing remote contents before webpack compiles.
-* Privde the `quertString` config for fetching diffrent remote contents.
+* Privde the `queryString` config for fetching diffrent remote contents.
 * Provide the `PreParser` for [react-templates](http://wix.github.io/react-templates)!  
 
 ### Basic Usage
@@ -166,8 +166,6 @@ module.exports = {
 
 `.ajs` extenion is only for the loader to recognize the file. 
 Write down the remote url that provides contents(node moudle) you want to fetch.
-The queryString you set will automatically append to the end of the url. 
-
  
 `remote-content.ajs`
 ```js
@@ -221,6 +219,40 @@ You can see `examples/example05` in codes for more detials.
 
 ### Example
 
+###### Step 1. Provide an .ajs file
+
+`.ajs` extenion is only for the loader to recognize the file. 
+Write down the remote url that provides contents(node moudle) you want to fetch.
+ 
+`remote-content-using-react-templates.ajs`
+```js
+http://jaydenlin.github.io/fake-remote-contents-for-test/contents/react-template/
+``` 
+the contnets from the remote url are: 
+
+```html
+<div>
+  <h3>Hello World Form Web</h3>
+</div>
+```
+It is a react-template.
+
+###### Step 2. Set up the preParser in webpack.config.js
+Use the sigle quote for the querString that you added.   
+To use React Teamplates parser, set the `preParser=rt`.   
+```js
+    module: {
+        loaders: [{
+            test: /\.ajs$/,
+            loader: "node-async-require-loader?preParser=rt"
+        }]
+    }
+```
+The react-template preParser will parse the contents to pure node moudle before webpack compiles.
+
+###### Step 3. Done
+Then the webpack will fetch the remote contents and build the codes for you!
+You can see `examples/example02` in codes for more detials.
 
 ### Test
 
