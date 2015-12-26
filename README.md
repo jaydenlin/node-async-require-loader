@@ -130,9 +130,9 @@ Use the sigle quote for the querString that you added.
 Then the webpack will fetch the remote contents and build the codes for you!
 You can see `examples/example03` in codes for more detials.
 
-### Useage with Pre Parser
+### Usage with Pre Parser
 
-In some cases, the remote contents you fetched may not be a pure node moudle. You need a parser to do some stuff before webpack compile it. So you can set up the preParser for the remote contents. 
+In some cases, the remote contents you fetch may `not be a pure node moudle`. You need a parser to do some stuffs before webpack compiles it. So you can set up a preParser for the remote contents.
 
 `webpack.config.js`
 ```js
@@ -205,7 +205,7 @@ You can see `examples/example05` in codes for more detials.
 
 
 
-### Useage with Pre Parser (React templates)
+### Usage with Pre Parser (React templates)
 
 
 ### Example
