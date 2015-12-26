@@ -22,13 +22,14 @@ I made up the file with `.ajs` extention.
 
 ### Basic Usage
 
-Fetch the remote contnets (node module) by http GET and build codes in webpack.  
-`.ajs` extention is only for the loader to recognize the file.  
+Fetch the remote contnets (node module) by http GET and build codes in webpack.   
 
+* Intsall this module
 ```
 npm install --save node-async-require-loader
 ```
-
+   
+   
 * Use directly in the js file. (Not recommed)
 ```js
 require("node-async-require-loader!remote-content.ajs");
@@ -44,6 +45,10 @@ require("node-async-require-loader!remote-content.ajs");
         }]
     }
 ```
+   
+
+> You may wondering what '.ajs' file is. The file contents of the `.ajs` file is just a single line of url. The remote url that provides contents(node moudle). The `.ajs` extention is only for the loader to recognize the file.
+
 
 ### Example for basic usage
 
