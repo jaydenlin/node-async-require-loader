@@ -17,7 +17,8 @@ I made up the file with `.ajs` extention.
 ### Highlight
 * Provid the `PreParser` config for parsing remote contents before webpack compiles.
 * Privde the `queryString` config for fetching diffrent remote contents.
-* Provide the `PreParser` for [react-templates](http://wix.github.io/react-templates)!  
+* Provide the `PreParser` for [react-templates](http://wix.github.io/react-templates)!
+* How about isomorphic `require()` on server-side ? We got [node-async-require](https://github.com/jaydenlin/node-async-require) for it !  
 
 ### Basic Usage
 
