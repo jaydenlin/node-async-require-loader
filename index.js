@@ -1,5 +1,4 @@
 var loaderUtils = require('loader-utils');
-var fetch = require("fetch");
 var fetchUrl = require("fetch").fetchUrl;
 
 module.exports = function(content) {
@@ -9,9 +8,10 @@ module.exports = function(content) {
     var callback = this.async();
     var query = loaderUtils.parseQuery(this.query);
 
+
     /*Set up the pre parser before return*/
     var preParser;
-    switch (query.p) {
+    switch (query.preParser) {
         case "rt":
             preParser = require("./preParser/reactTemplate.js");
             break;
@@ -21,9 +21,14 @@ module.exports = function(content) {
             };
     }
 
+    console.log(preParser);
+
+    var queryString = query.queryString || "";
+    var nodeModleUrl = content.trim() + queryString.replace(/'/gi, "");
+
     /*Do the aync fetch and return*/
-    console.log(content.trim());
-    fetchUrl(content.trim(), function(err, meta, body) {
+    console.log(nodeModleUrl);
+    fetchUrl(nodeModleUrl, function(err, meta, body) {
         var rawContent = body.toString();
         callback(null, "module.exports = " + JSON.stringify(preParser(rawContent)));
 
