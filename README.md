@@ -2,11 +2,9 @@
 
 > Transparently `require()` remote contents (node moudles) in webpack !
 
-## Why
-
-
-## Examples
 ### Basic Usage
+> Fetch the remote contnets (node module) by http GET and build codes in webpack.
+
 ```
 npm install --save node-async-require-loader
 ```
@@ -28,7 +26,6 @@ require("node-async-require-loader!remote-content.ajs");
 ```
 
 ### Example for basic usage
-> In this example, it fetchs the remote contnets (node module) by http GET and build codes in webpack.
 
 ###### Step 1. Provide an .ajs file
 
