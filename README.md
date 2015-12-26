@@ -160,7 +160,7 @@ module.exports = {
 ```
 
 
-### Example
+### Example with Pre Parser
 
 ###### Step 1. Provide an .ajs file
 
@@ -217,7 +217,7 @@ You can see `examples/example05` in codes for more detials.
 ### Usage with Pre Parser (React templates)
 
 
-### Example
+### Example with Pre Parser (React templates)
 
 ###### Step 1. Provide an .ajs file
 
