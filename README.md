@@ -86,6 +86,8 @@ You can see `examples/example01` in codes for more detials.
 In some cases, the fixed remote url is not good. You may need to add queryString to fetch diffrent remote contents (node moudle).
 
 * Use queryString directly in the js file. (Not recommed)
+Use the `sigle quote` for the querString that you added.
+
 ```js
 require("node-async-require-loader!remote-content.ajs?queryString='en'");
 
@@ -129,7 +131,7 @@ module.export=function(){ console.log("Hello USA From Web"); };
 It's a node moudle.
 
 ###### Step 2. Set up the webpack.config.js
-Use the sigle quote for the querString that you added.
+Use the `sigle quote` for the querString that you added.
 ```js
     module: {
         loaders: [{
@@ -200,7 +202,7 @@ module.exports=function(){ console.log('Replaceed by custom preParser!');}
 It's a new node moudle.
 
 ###### Step 3. Set up the preParser in webpack.config.js
-Use the sigle quote for the querString that you added.
+To use the preParser that you added, set the `preParser=anyNameYouWant`
 ```js
     module: {
         loaders: [{
@@ -250,7 +252,7 @@ the contnets from the remote url are:
 It is a react-template.
 
 ###### Step 2. Set up the preParser in webpack.config.js
-Use the sigle quote for the querString that you added.   
+   
 To use React Teamplates parser, set the `preParser=rt`.   
 ```js
     module: {
