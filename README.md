@@ -6,15 +6,18 @@
 
 
 ## Usage
+```
+npm install --save node-async-require-loader
+```
 
 ### Use directly in the js file. 
-```
+```js
 require("node-async-require-loader!remote-content.ajs");
 
 ```
 
 ### Set up the webpack.config.js
-```
+```js
     module: {
         loaders: [{
             test: /\.ajs$/,
@@ -31,18 +34,18 @@ Only write down the remote url that with contents(node moudle) you want to fetch
 (.ajs extenion is only for loader to recognize the file) 
  
 remote-content.ajs
-```
+```js
 https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/
 ``` 
 
 the contnets from the remote url are ..
 
-```
+```js
 module.export=function(){ console.log("Hello World From Web"); };
 ```
 
 ### Set up the webpack.config.js
-```
+```js
     module: {
         loaders: [{
             test: /\.ajs$/,
@@ -58,13 +61,13 @@ Then the webpack will fetch the remote contents and build the codes for you!
 ## Usage with queryString
 
 ### Use directly in the js file. 
-```
+```js
 require("node-async-require-loader!remote-content.ajs?queryString='en'");
 
 ```
 
 ### Set up the webpack.config.js
-```
+```js
     module: {
         loaders: [{
             test: /\.ajs$/,
@@ -82,24 +85,24 @@ The queryString will automatically append to the end of the url.
 (.ajs extenion is only for loader to recognize the file) 
  
 remote-content.ajs
-```
+```js
 https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/
 ``` 
 
 With the queryString, the actual url we fetch is 
 
-```
+```js
 //the queryString `en` is appended
 https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/en/
 ```
 
 So the contents will be the new url's contents
-```
+```js
 module.export=function(){ console.log("Hello USA From Web"); };
 ```
 
 ### Set up the webpack.config.js
-```
+```js
     module: {
         loaders: [{
             test: /\.ajs$/,
