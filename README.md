@@ -5,8 +5,8 @@
 ### Concept
 I made up the file with `.ajs` extention.
 * Only for loader to recognize the file.
-* The file only write down the remote url.
-* webpack will fetch the contents to build codes.
+* The file contents is only a remote url.
+* webpack will fetch the contents by the remote url to build codes.
 
 ### Basic Usage
 
