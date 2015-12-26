@@ -50,7 +50,7 @@ require("node-async-require-loader!remote-content.ajs");
 ##### Step 1. Provide an .ajs file
 
 `.ajs` extenion is only for the loader to recognize the file.  
-Write down the remote url that provides contents(node moudle) you want to fetch.  
+Write down the remote url that provides contents(node moudle).  
 The following is the exmaple of .ajs file.  
  
 `remote-content.ajs`
@@ -66,7 +66,7 @@ module.export=function(){ console.log("Hello World From Web"); };
 It's a node moudle.
 
 ##### Step 2. Set up the webpack.config.js
-We set up the config so that the loader will load the .ajs file and to fetch the remote node moudle.
+We set up the config so that the loader will load the .ajs file and fetch the remote node moudle.
 
 ```js
     module: {
@@ -83,7 +83,7 @@ You can see `examples/example01` in codes for more detials.
 
 ### Usage with queryString
 
-In some cases, the fixed remote url is not good. you may need to add queryString to fetch diffrent remote contents (node moudle).
+In some cases, the fixed remote url is not good. You may need to add queryString to fetch diffrent remote contents (node moudle).
 
 * Use queryString directly in the js file. (Not recommed)
 ```js
@@ -176,7 +176,7 @@ https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/
 
 ###### Step 2. Write down your own the preParser in webpack.config.js
 
-The fetched contents will be passed to the preParser you write (in this example, it will be `anyNameYouWant`) before webpack compile it.
+The fetched contents will be passed to the preParser you write (in this example, it will be `anyNameYouWant`) before webpack compiles it.
 
 `webpack.config.js`
 ```js
