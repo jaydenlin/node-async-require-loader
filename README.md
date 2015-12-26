@@ -4,8 +4,8 @@
 
 ### Basic Usage
 
-Fetch the remote contnets (node module) by http GET and build codes in webpack.
-.ajs extenion is only for loader to recognize the file.
+Fetch the remote contnets (node module) by http GET and build codes in webpack. 
+`.ajs` extenion is only for loader to recognize the file.
 
 ```
 npm install --save node-async-require-loader
