@@ -29,6 +29,7 @@
     "react-templates": "0.3.2"
   },
   "devDependencies": {
+    "react": "0.13.3",
     "shelljs": "0.5.3",
     "webpack": "1.12.9"
   }

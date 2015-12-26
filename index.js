@@ -39,7 +39,9 @@ module.exports = function(content) {
 
     fetchUrl(nodeModleUrl, function(err, meta, body) {
         var rawContent = body.toString();
-        callback(null, "module.exports = " + JSON.stringify(preParser(rawContent)));
+        // callback(null, "module.exports = " + JSON.stringify(preParser(rawContent)));
+
+        callback(null, preParser(rawContent));
 
     });
 
