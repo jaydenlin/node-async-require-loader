@@ -2,16 +2,26 @@
 
 > Transparently `require()` remote contents (node moudles) in webpack !
 
+
+```
+npm install --save node-async-require-loader
+```
 ### Concept
 I made up the file with `.ajs` extention.
-* Only for loader to recognize the file.
+* Only for the loader to recognize the file.
 * The file contents is only a remote url.
 * webpack will fetch the contents by the remote url to build codes.
+
+### Highlight
+* Provid the `PreParser` config for parse remote contents before webpack compiles.
+* Privde the `quertString` config for fetching diffrent remote contents.
+* Provide the `PreParser` for [react-templates](http://wix.github.io/react-templates)!  
 
 ### Basic Usage
 
 Fetch the remote contnets (node module) by http GET and build codes in webpack.  
-`.ajs` extention is only for loader to recognize the file.  
+`.ajs` extention is only for the loader to recognize the file.  
+
 ```
 npm install --save node-async-require-loader
 ```
@@ -36,7 +46,7 @@ require("node-async-require-loader!remote-content.ajs");
 
 ##### Step 1. Provide an .ajs file
 
-`.ajs` extenion is only for loader to recognize the file.  
+`.ajs` extenion is only for the loader to recognize the file.  
 Write down the remote url that provides contents(node moudle) you want to fetch.  
 The following is the exmaple of .ajs file.  
  
@@ -92,7 +102,7 @@ require("node-async-require-loader!remote-content.ajs?queryString='en'");
 
 ###### Step 1. Provide an .ajs file
 
-`.ajs` extenion is only for loader to recognize the file. 
+`.ajs` extenion is only for the loader to recognize the file. 
 Write down the remote url that provides contents(node moudle) you want to fetch.
 The queryString you set will automatically append to the end of the url. 
 
@@ -153,7 +163,7 @@ module.exports = {
 
 ###### Step 1. Provide an .ajs file
 
-`.ajs` extenion is only for loader to recognize the file. 
+`.ajs` extenion is only for the loader to recognize the file. 
 Write down the remote url that provides contents(node moudle) you want to fetch.
 The queryString you set will automatically append to the end of the url. 
 
