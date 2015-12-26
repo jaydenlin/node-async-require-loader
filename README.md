@@ -49,7 +49,7 @@ require("node-async-require-loader!remote-content.ajs");
 
 ##### Step 1. Provide an .ajs file
 
-`.ajs` extenion is only for the loader to recognize the file.  
+The file contents of the `.ajs` file is just a single line of url.      
 Write down the remote url that provides contents(node moudle).  
 The following is the exmaple of .ajs file.  
  
@@ -107,16 +107,16 @@ require("node-async-require-loader!remote-content.ajs?queryString='en'");
 
 ###### Step 1. Provide an .ajs file
 
-`.ajs` extenion is only for the loader to recognize the file. 
-Write down the remote url that provides contents(node moudle) you want to fetch.
-The queryString you set will automatically append to the end of the url. 
-
+The file contents of the `.ajs` file is just a single line of url.      
+Write down the remote url that provides contents(node moudle).  
+The following is the exmaple of .ajs file.  
  
 `remote-content.ajs`
 ```js
 https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/
 ``` 
 
+When webpack start to run, the queryString you set will automatically append to the end of the url. 
 With the queryString, the actual url we fetch is 
 
 ```js
@@ -168,8 +168,9 @@ module.exports = {
 
 ###### Step 1. Provide an .ajs file
 
-`.ajs` extenion is only for the loader to recognize the file. 
-Write down the remote url that provides contents(node moudle) you want to fetch.
+The file contents of the `.ajs` file is just a single line of url.      
+Write down the remote url that provides contents(node moudle).  
+The following is the exmaple of .ajs file.  
  
 `remote-content.ajs`
 ```js
@@ -235,8 +236,9 @@ You can use it by setting the `preParser=rt`.
 
 ###### Step 1. Provide an .ajs file
 
-`.ajs` extenion is only for the loader to recognize the file. 
-Write down the remote url that provides contents(node moudle) you want to fetch.
+The file contents of the `.ajs` file is just a single line of url.      
+Write down the remote url that provides contents(node moudle).  
+The following is the exmaple of .ajs file.  
  
 `remote-content-using-react-templates.ajs`
 ```js
