@@ -7,14 +7,14 @@
 npm install --save node-async-require-loader
 ```
 ### Concept
-Fetch the remote contnets (node module) by http GET and build codes in webpack.
+Fetch the remote contnets (node module) by http GET and build codes in webpack.   
 I made up the file with `.ajs` extention.
 * Only for the loader to recognize the file.
 * The file contents is only a remote url.
 * webpack will fetch the contents by the remote url to build codes.
 
 ### Highlight
-* Provid the `PreParser` config for parse remote contents before webpack compiles.
+* Provid the `PreParser` config for parsing remote contents before webpack compiles.
 * Privde the `quertString` config for fetching diffrent remote contents.
 * Provide the `PreParser` for [react-templates](http://wix.github.io/react-templates)!  
 
