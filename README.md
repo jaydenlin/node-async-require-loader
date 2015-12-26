@@ -215,7 +215,17 @@ You can see `examples/example05` in codes for more detials.
 
 
 ### Usage with Pre Parser (React templates)
+We provide a preparser for pasing react-templates contents.
+You can use it by setting the `preParser=rt`.
 
+```js
+    module: {
+        loaders: [{
+            test: /\.ajs$/,
+            loader: "node-async-require-loader?preParser=rt"
+        }]
+    }
+```
 
 ### Example with Pre Parser (React templates)
 
