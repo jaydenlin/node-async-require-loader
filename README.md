@@ -32,7 +32,7 @@ require("node-async-require-loader!remote-content.ajs");
 ##### Step 1. Provide an .ajs file
 
 `.ajs` extenion is only for loader to recognize the file. 
-Write down the remote url that with contents(node moudle) you want to fetch. 
+Write down the remote url that provides contents(node moudle) you want to fetch. 
 The following is the exmaple of .ajs file.
  
 `remote-content.ajs`
@@ -88,7 +88,7 @@ require("node-async-require-loader!remote-content.ajs?queryString='en'");
 ###### Step 1. Provide an .ajs file
 
 `.ajs` extenion is only for loader to recognize the file. 
-Write down the remote url that with contents(node moudle) you want to fetch.
+Write down the remote url that provides contents(node moudle) you want to fetch.
 The queryString you set will automatically append to the end of the url. 
 
  
@@ -149,7 +149,7 @@ module.exports = {
 ###### Step 1. Provide an .ajs file
 
 `.ajs` extenion is only for loader to recognize the file. 
-Write down the remote url that with contents(node moudle) you want to fetch.
+Write down the remote url that provides contents(node moudle) you want to fetch.
 The queryString you set will automatically append to the end of the url. 
 
  
