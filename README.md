@@ -2,21 +2,21 @@
 
 > Transparently `require()` remote contents (node moudles) in webpack !
 
-## Why
+### Why
 
 
-## Usage
+### Usage
 ```
 npm install --save node-async-require-loader
 ```
 
-### Use directly in the js file. 
+* Use directly in the js file. 
 ```js
 require("node-async-require-loader!remote-content.ajs");
 
 ```
 
-### Set up the webpack.config.js
+* Set up the webpack.config.js
 ```js
     module: {
         loaders: [{
@@ -26,9 +26,9 @@ require("node-async-require-loader!remote-content.ajs");
     }
 ```
 
-## Example
+### Example
 
-### Provide an .ajs file
+###### Step 1. Provide an .ajs file
 
 Only write down the remote url that with contents(node moudle) you want to fetch. 
 (.ajs extenion is only for loader to recognize the file) 
@@ -44,7 +44,7 @@ the contnets from the remote url are ..
 module.export=function(){ console.log("Hello World From Web"); };
 ```
 
-### Set up the webpack.config.js
+###### Step 2. Set up the webpack.config.js
 ```js
     module: {
         loaders: [{
@@ -54,19 +54,19 @@ module.export=function(){ console.log("Hello World From Web"); };
     }
 ```
 
-### Done
+###### Step 3. Done
 Then the webpack will fetch the remote contents and build the codes for you!
 
 
-## Usage with queryString
+### Usage with queryString
 
-### Use directly in the js file. 
+* Use directly in the js file. 
 ```js
 require("node-async-require-loader!remote-content.ajs?queryString='en'");
 
 ```
 
-### Set up the webpack.config.js
+* Set up the webpack.config.js
 ```js
     module: {
         loaders: [{
@@ -78,7 +78,7 @@ require("node-async-require-loader!remote-content.ajs?queryString='en'");
 
 ## Example 
 
-### Provide an .ajs file
+###### Step 1. Provide an .ajs file
 
 Only write down the remote url that with contents(node moudle) you want to fetch.
 The queryString will automatically append to the end of the url. 
@@ -101,7 +101,7 @@ So the contents will be the new url's contents
 module.export=function(){ console.log("Hello USA From Web"); };
 ```
 
-### Set up the webpack.config.js
+###### Step 2. Set up the webpack.config.js
 ```js
     module: {
         loaders: [{
@@ -111,25 +111,25 @@ module.export=function(){ console.log("Hello USA From Web"); };
     }
 ```
 
-### Done
+###### Step 3. Done
 Then the webpack will fetch the remote contents and build the codes for you!
 
 
 
-## Useage with Pre Parser
+### Useage with Pre Parser
 
 
-## Example
+### Example
 
 
 
-## Useage with Pre Parser (React templates)
+### Useage with Pre Parser (React templates)
 
 
-## Example
+### Example
 
 
-## Test
+### Test
 
 Use the command to run the mocha test. 
  
