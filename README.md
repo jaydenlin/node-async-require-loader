@@ -3,7 +3,8 @@
 > Transparently `require()` remote contents (node moudles) in webpack !
 
 ### Basic Usage
-> Fetch the remote contnets (node module) by http GET and build codes in webpack.
+
+Fetch the remote contnets (node module) by http GET and build codes in webpack.
 
 ```
 npm install --save node-async-require-loader
@@ -62,7 +63,8 @@ Then the webpack will fetch the remote contents and build the codes for you!
 You can see examples/example01 in codes for more detials.
 
 ### Usage with queryString
-> In some cases, the fixed remote url is not good. you may need to add queryString to fetch diffrent remote contents (node moudle).
+
+In some cases, the fixed remote url is not good. you may need to add queryString to fetch diffrent remote contents (node moudle).
 
 * Use queryString directly in the js file. (Not recommed)
 ```js
@@ -123,7 +125,8 @@ Then the webpack will fetch the remote contents and build the codes for you!
 You can see examples/example03 in codes for more detials.
 
 ### Useage with Pre Parser
-> In some cases, the remote contents you fetched may not be pure node moudle. You need a parser to do some stuff before webpack compile it. So you can set up the preParser for the remote contents. 
+
+In some cases, the remote contents you fetched may not be pure node moudle. You need a parser to do some stuff before webpack compile it. So you can set up the preParser for the remote contents. 
 
 ### Example
 
