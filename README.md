@@ -36,7 +36,7 @@ require("node-async-require-loader!remote-content.ajs");
 
 ```
 
-* Or Set up the webpack.config.js
+* Or Set up in the webpack.config.js
 ```js
     module: {
         loaders: [{
@@ -90,7 +90,7 @@ You can see `examples/example01` in codes for more detials.
 
 In some cases, the fixed remote url is not good. You may need to add queryString to fetch diffrent remote contents (node moudle).
 
-* Use queryString directly in the js file. (Not recommed)
+* Use queryString directly in the js file. (Not recommed)   
 Use the `sigle quote` for the querString that you added.
 
 ```js
@@ -98,7 +98,8 @@ require("node-async-require-loader!remote-content.ajs?queryString='en'");
 
 ```
 
-* Or Set up the webpack.config.js
+* Or Set up in the webpack.config.js   
+Use the `sigle quote` for the querString that you added.
 ```js
     module: {
         loaders: [{
@@ -147,7 +148,7 @@ Use the `sigle quote` for the querString that you added.
 ```
 
 ###### Step 3. Done
-Then the webpack will fetch the remote contents and build the codes for you!
+Then the webpack will fetch the remote contents and build the codes for you!   
 You can see `examples/example03` in codes for more detials.
 
 ### Usage with Pre Parser
