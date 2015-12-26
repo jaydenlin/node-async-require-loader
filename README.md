@@ -2,11 +2,16 @@
 
 > Transparently `require()` remote contents (node moudles) in webpack !
 
+### Concept
+I made up the file with `.ajs` extention.
+* Only for loader to recognize the file.
+* The file only write down the remote url.
+* webpack will fetch the contents to build codes.
+
 ### Basic Usage
 
-Fetch the remote contnets (node module) by http GET and build codes in webpack. 
-`.ajs` extenion is only for loader to recognize the file.
-
+Fetch the remote contnets (node module) by http GET and build codes in webpack.  
+`.ajs` extention is only for loader to recognize the file.  
 ```
 npm install --save node-async-require-loader
 ```
@@ -31,9 +36,9 @@ require("node-async-require-loader!remote-content.ajs");
 
 ##### Step 1. Provide an .ajs file
 
-`.ajs` extenion is only for loader to recognize the file. 
-Write down the remote url that provides contents(node moudle) you want to fetch. 
-The following is the exmaple of .ajs file.
+`.ajs` extenion is only for loader to recognize the file.  
+Write down the remote url that provides contents(node moudle) you want to fetch.  
+The following is the exmaple of .ajs file.  
  
 `remote-content.ajs`
 ```js
