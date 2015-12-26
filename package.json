@@ -24,6 +24,7 @@
   "dependencies": {
     "fetch": "0.3.6",
     "loader-utils": "0.2.12",
+    "lodash": "3.10.1",
     "mocha": "2.3.4",
     "react-templates": "0.3.2"
   },
