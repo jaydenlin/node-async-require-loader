@@ -2,7 +2,7 @@
 var path = require("path"),
 
     webpack = require("webpack"),
-    parameter = "tw";
+    parameter = "en";
 
 module.exports = {
     cache: true,
@@ -17,7 +17,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.ajs$/,
-            loader: "node-async-require-loader?queryString='?country=" + parameter + "'"
+            loader: "node-async-require-loader?queryString='" + parameter + "'"
         }]
     },
     plugins: [
