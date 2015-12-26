@@ -7,6 +7,7 @@
 npm install --save node-async-require-loader
 ```
 ### Concept
+Fetch the remote contnets (node module) by http GET and build codes in webpack.
 I made up the file with `.ajs` extention.
 * Only for the loader to recognize the file.
 * The file contents is only a remote url.
