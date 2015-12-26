@@ -1,6 +1,6 @@
 {
   "name": "node-async-require-loader",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Transparently require() remote contents (node moudles) in webpack !",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,10 @@
   "keywords": [
     "react-templates",
     "node",
-    "server"
+    "aync require",
+    "remote node moudle",
+    "webpack",
+    "webpack loader"
   ],
   "author": "Jayden Lin <jayden.weiyu@gmail.com> (http://www.jdlin.com)",
   "license": "ISC",
