@@ -27,10 +27,9 @@ require("node-async-require-loader!remote-content.ajs");
 ```
 
 ### Example for basic usage
+* Step 1. Provide an .ajs file
 
-##### Step 1. Provide an .ajs file
-
-.ajs extenion is only for loader to recognize the file. 
+`.ajs` extenion is only for loader to recognize the file. 
 Write down the remote url that with contents(node moudle) you want to fetch. 
 The following is the exmaple of .ajs file.
  
@@ -45,8 +44,7 @@ the contnets from the remote url are:
 module.export=function(){ console.log("Hello World From Web"); };
 ```
 It's a node moudle.
-
-##### Step 2. Set up the webpack.config.js
+* Step 2. Set up the webpack.config.js
 We set up the config so that the loader will load the .ajs file and to fetch the remote node moudle.
 
 ```js
@@ -57,10 +55,9 @@ We set up the config so that the loader will load the .ajs file and to fetch the
         }]
     }
 ```
-
-##### Step 3. Done
+* Step 3. Done
 Then the webpack will fetch the remote contents and build the codes for you!
-You can see examples/example01 in codes for more detials.
+You can see `examples/example01` in codes for more detials.
 
 ### Usage with queryString
 
@@ -84,9 +81,9 @@ require("node-async-require-loader!remote-content.ajs?queryString='en'");
 
 ## Example for using queryString
 
-###### Step 1. Provide an .ajs file
+* Step 1. Provide an .ajs file
 
-.ajs extenion is only for loader to recognize the file. 
+`.ajs` extenion is only for loader to recognize the file. 
 Write down the remote url that with contents(node moudle) you want to fetch.
 The queryString you set will automatically append to the end of the url. 
 
@@ -109,7 +106,7 @@ module.export=function(){ console.log("Hello USA From Web"); };
 ```
 It's a node moudle.
 
-###### Step 2. Set up the webpack.config.js
+* Step 2. Set up the webpack.config.js
 Use the sigle quote for the querString that you added.
 ```js
     module: {
@@ -120,13 +117,13 @@ Use the sigle quote for the querString that you added.
     }
 ```
 
-###### Step 3. Done
+* Step 3. Done
 Then the webpack will fetch the remote contents and build the codes for you!
-You can see examples/example03 in codes for more detials.
+You can see `examples/example03` in codes for more detials.
 
 ### Useage with Pre Parser
 
-In some cases, the remote contents you fetched may not be pure node moudle. You need a parser to do some stuff before webpack compile it. So you can set up the preParser for the remote contents. 
+In some cases, the remote contents you fetched may not be a pure node moudle. You need a parser to do some stuff before webpack compile it. So you can set up the preParser for the remote contents. 
 
 ### Example
 
