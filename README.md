@@ -27,7 +27,8 @@ require("node-async-require-loader!remote-content.ajs");
 ```
 
 ### Example for basic usage
-* Step 1. Provide an .ajs file
+
+##### Step 1. Provide an .ajs file
 
 `.ajs` extenion is only for loader to recognize the file. 
 Write down the remote url that with contents(node moudle) you want to fetch. 
@@ -44,7 +45,8 @@ the contnets from the remote url are:
 module.export=function(){ console.log("Hello World From Web"); };
 ```
 It's a node moudle.
-* Step 2. Set up the webpack.config.js
+
+##### Step 2. Set up the webpack.config.js
 We set up the config so that the loader will load the .ajs file and to fetch the remote node moudle.
 
 ```js
@@ -55,7 +57,8 @@ We set up the config so that the loader will load the .ajs file and to fetch the
         }]
     }
 ```
-* Step 3. Done
+
+##### Step 3. Done
 Then the webpack will fetch the remote contents and build the codes for you!
 You can see `examples/example01` in codes for more detials.
 
@@ -81,7 +84,7 @@ require("node-async-require-loader!remote-content.ajs?queryString='en'");
 
 ## Example for using queryString
 
-* Step 1. Provide an .ajs file
+###### Step 1. Provide an .ajs file
 
 `.ajs` extenion is only for loader to recognize the file. 
 Write down the remote url that with contents(node moudle) you want to fetch.
@@ -106,7 +109,7 @@ module.export=function(){ console.log("Hello USA From Web"); };
 ```
 It's a node moudle.
 
-* Step 2. Set up the webpack.config.js
+###### Step 2. Set up the webpack.config.js
 Use the sigle quote for the querString that you added.
 ```js
     module: {
@@ -117,7 +120,7 @@ Use the sigle quote for the querString that you added.
     }
 ```
 
-* Step 3. Done
+###### Step 3. Done
 Then the webpack will fetch the remote contents and build the codes for you!
 You can see `examples/example03` in codes for more detials.
 
