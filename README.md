@@ -66,7 +66,7 @@ https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/
 the contnets from the remote url are: 
 
 ```js
-module.export=function(){ console.log("Hello World From Web"); };
+module.exports=function(){ console.log("Hello World From Web"); };
 ```
 It's a node moudle.
 
@@ -132,7 +132,7 @@ https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/en/
 
 So the contents will be the new url's contents
 ```js
-module.export=function(){ console.log("Hello USA From Web"); };
+module.exports=function(){ console.log("Hello USA From Web"); };
 ```
 It's a node moudle.
 
