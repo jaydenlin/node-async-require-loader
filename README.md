@@ -50,7 +50,7 @@ require("node-async-require-loader!remote-content.ajs");
 > You may wondering what '.ajs' file is. The file contents of the `.ajs` file is just a single line of url. The remote url that provides contents(node moudle). The `.ajs` extention is only for the loader to recognize the file.
 
 
-### Example for basic usage
+### Example for Basic Usage
 
 ##### Step 1. Provide an .ajs file
 
@@ -151,7 +151,7 @@ Use the `sigle quote` for the querString that you added.
 Then the webpack will fetch the remote contents and build the codes for you!   
 You can see `examples/example03` in codes for more detials.
 
-### Usage with Pre Parser
+### Usage with preParser
 
 In some cases, the remote contents you fetch may `not be a pure node moudle`. You need a parser to do some stuffs before webpack compiles it. So you can set up a preParser for the remote contents.
 
@@ -170,7 +170,7 @@ module.exports = {
 ```
 
 
-### Example with Pre Parser
+### Example with preParser
 
 ###### Step 1. Provide an .ajs file
 
@@ -225,7 +225,7 @@ You can see `examples/example05` in codes for more detials.
 
 
 
-### Usage with Pre Parser (React templates)
+### Usage with preParser (React templates)
 We provide a preparser for pasing react-templates contents.
 You can use it by setting the `preParser=rt`.
 
@@ -238,7 +238,7 @@ You can use it by setting the `preParser=rt`.
     }
 ```
 
-### Example with Pre Parser (React templates)
+### Example with preParser (React templates)
 
 ###### Step 1. Provide an .ajs file
 
