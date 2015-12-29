@@ -103,7 +103,6 @@ Use the `sigle quote` for the querString that you added.
 
 ```js
 require("node-async-require-loader!remote-content.ajs?queryString='en'");
-
 ```
 
 * Or Set up in the webpack.config.js   
@@ -127,7 +126,9 @@ The following is the exmaple of .ajs file.
  
 `remote-content.ajs`
 ```js
-https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/
+module.exports = {
+    remoteUrl: "https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/"
+}
 ``` 
 
 When webpack start to run, the queryString you set will automatically append to the end of the url. 
@@ -188,7 +189,9 @@ The following is the exmaple of .ajs file.
  
 `remote-content.ajs`
 ```js
-https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/
+module.exports = {
+    remoteUrl: "https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/"
+}
 ``` 
 
 ###### Step 2. Write down your own the preParser in webpack.config.js
@@ -256,7 +259,9 @@ The following is the exmaple of .ajs file.
  
 `remote-content-using-react-templates.ajs`
 ```js
-http://jaydenlin.github.io/fake-remote-contents-for-test/contents/react-template/
+module.exports = {
+    remoteUrl: "http://jaydenlin.github.io/fake-remote-contents-for-test/contents/react-template/"
+}
 ``` 
 the contnets from the remote url are: 
 
