@@ -11,7 +11,12 @@ npm install --save node-async-require-loader
 Fetch the remote contnets (node module) by http GET and build codes in webpack.   
 I made up the file with `.ajs` extention.
 * Only for the loader to recognize the file.
-* The file contents is only a remote url.
+* The file contents is a node moudle that provides a remote url.
+```js
+module.exports = {
+   remoteUrl : "http://xxx.xxx.xxx/api/"
+}
+```
 * webpack will fetch the contents by the remote url to build codes.
 
 ### Highlight
@@ -47,14 +52,14 @@ require("node-async-require-loader!remote-content.ajs");
 ```
    
 
-> You may wondering what '.ajs' file is. The file contents of the `.ajs` file is just a single line of url. The remote url that provides contents(node moudle). The `.ajs` extention is only for the loader to recognize the file.
+> You may wondering what '.ajs' file is. The file contents of the `.ajs` file is a node moudle providing a remote url. The remote url that provides contents(node moudle). The `.ajs` extention is only for the loader to recognize the file.
 
 
 ### Example for Basic Usage
 
 ##### Step 1. Provide an .ajs file
 
-The file contents of the `.ajs` file is just a single line of url.      
+The file contents of the `.ajs` file is a node moudle providing a remote url.      
 Write down the remote url that provides contents(node moudle).  
 The following is the exmaple of .ajs file.  
  
@@ -116,7 +121,7 @@ Use the `sigle quote` for the querString that you added.
 
 ###### Step 1. Provide an .ajs file
 
-The file contents of the `.ajs` file is just a single line of url.      
+The file contents of the `.ajs` file is a node moudle providing a remote url.      
 Write down the remote url that provides contents(node moudle).  
 The following is the exmaple of .ajs file.  
  
@@ -177,7 +182,7 @@ module.exports = {
 
 ###### Step 1. Provide an .ajs file
 
-The file contents of the `.ajs` file is just a single line of url.      
+The file contents of the `.ajs` file is a node moudle providing a remote url.      
 Write down the remote url that provides contents(node moudle).  
 The following is the exmaple of .ajs file.  
  
@@ -245,7 +250,7 @@ You can use it by setting the `preParser=rt`.
 
 ###### Step 1. Provide an .ajs file
 
-The file contents of the `.ajs` file is just a single line of url.      
+The file contents of the `.ajs` file is a node moudle providing a remote url.      
 Write down the remote url that provides contents(node moudle).  
 The following is the exmaple of .ajs file.  
  
