@@ -1,6 +1,6 @@
 {
   "name": "node-async-require-loader",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "Transparently require() remote contents (node moudles) in webpack !",
   "main": "index.js",
   "scripts": {
