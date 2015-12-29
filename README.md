@@ -59,8 +59,11 @@ Write down the remote url that provides contents(node moudle).
 The following is the exmaple of .ajs file.  
  
 `remote-content.ajs`
+
 ```js
-https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/
+module.exports = {
+	remoteUrl: "https://jaydenlin.github.io/fake-remote-contents-for-test/contents/pure-js/"
+}
 ``` 
 
 the contnets from the remote url are: 
@@ -276,10 +279,48 @@ The react-template preParser will parse the contents to pure node moudle before 
 Then the webpack will fetch the remote contents and build the codes for you!
 You can see `examples/example02` in codes for more detials.
 
+### Example for using local file
+
+##### Step 1. Provide an new .ajs file
+
+Add local path to ajs file
+ 
+`local-content.ajs`
+
+```js
+module.exports = {
+	remoteUrl: "http://jaydenlin.github.io/fake-remote-contents-for-test/contents/react-template/",
+	localPath: './examples/example06--usage-with-local/test.txt'
+}
+```
+
+the contnets in the test.txt are: 
+
+```js
+module.exports=function(){ console.log("Hello World From Local"); }
+```
+It's a node moudle.
+
+##### Step 2. Set up the webpack.config.js
+We set up the config so that the loader will load the .ajs file and fetch the remote node moudle.
+
+```js
+    module: {
+        loaders: [{
+            test: /\.ajs$/,
+            loader: "node-async-require-loader?async=false"
+        }]
+    }
+```
+
+##### Step 3. Done
+Then the webpack will get local file content and build the codes for you!
+You can see `examples/example06` and `examples/example07` in codes for more detials, it also work fine with react templates.
+
 ### Test
 
 Use the command to run the mocha test. 
- 
+
 ```
 npm test
 ```
