@@ -7,7 +7,7 @@ var path = require("path"),
 module.exports = {
     cache: true,
     entry: {
-        test: "./examples/example04/entry.js"
+        test: "./examples/example03--usage-with-queryString/entry.js"
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -17,7 +17,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.ajs$/,
-            loader: "node-async-require-loader?preParser=rt&queryString='" + parameter + "'"
+            loader: "node-async-require-loader?queryString='" + parameter + "'"
         }]
     },
     plugins: [

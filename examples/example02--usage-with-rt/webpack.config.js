@@ -1,13 +1,12 @@
 "use strict";
 var path = require("path"),
 
-    webpack = require("webpack"),
-    parameter = "en";
+    webpack = require("webpack");
 
 module.exports = {
     cache: true,
     entry: {
-        test: "./examples/example03/entry.js"
+        test: "./examples/example02--usage-with-rt/entry.js"
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -17,7 +16,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.ajs$/,
-            loader: "node-async-require-loader?queryString='" + parameter + "'"
+            loader: "node-async-require-loader?preParser=rt"
         }]
     },
     plugins: [

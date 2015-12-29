@@ -4,7 +4,7 @@
   "description": "Transparently require() remote contents (node moudles) in webpack !",
   "main": "index.js",
   "scripts": {
-    "test": "npm link node-async-require-loader && mocha test/index.js"
+    "test": "sudo npm link && npm link node-async-require-loader && mocha test/index.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "loader-utils": "0.2.12",
     "lodash": "3.10.1",
     "mocha": "2.3.4",
+    "npm-link-shared": "0.2.0",
     "react-templates": "0.3.2"
   },
   "devDependencies": {
