@@ -7,7 +7,7 @@ var path = require("path"),
 module.exports = {
     cache: true,
     entry: {
-        test: "./examples/example05/entry.js"
+        test: "./examples/example06--usage-with-local/entry.js"
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -17,15 +17,8 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.ajs$/,
-            loader: "node-async-require-loader?preParser=anyNameYouWant"
+            loader: "node-async-require-loader?async=false"
         }]
-    },
-    NodeAsycRequirePreParser: {
-        anyNameYouWant: function(remoteRawContent) {
-            // replace by your own contents
-            remoteRawContent = "module.exports=function(){ console.log('Replaceed by custom preParser!');}";
-            return remoteRawContent;
-        }
     },
     plugins: [
 

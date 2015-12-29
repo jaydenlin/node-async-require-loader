@@ -1,0 +1,1 @@
+!function(o){function r(t){if(n[t])return n[t].exports;var e=n[t]={exports:{},id:t,loaded:!1};return o[t].call(e.exports,e,e.exports,r),e.loaded=!0,e.exports}var n={};return r.m=o,r.c=n,r.p="/",r(0)}([function(o,r,n){n(1)},function(o,r){o.exports=function(){console.log("Hello World From Local")}}]);
