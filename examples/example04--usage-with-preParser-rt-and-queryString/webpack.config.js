@@ -7,7 +7,7 @@ var path = require("path"),
 module.exports = {
     cache: true,
     entry: {
-        test: "./examples/example04--usage-with-rt-queryString/entry.js"
+        test: "./examples/example04--usage-with-preParser-rt-and-queryString/entry.js"
     },
     output: {
         path: path.join(__dirname, 'dist'),

@@ -3,11 +3,10 @@ var path = require("path"),
 
     webpack = require("webpack");
 
-
 module.exports = {
     cache: true,
     entry: {
-        test: "./examples/example07--usage-with-rt-local/entry.js"
+        test: "./examples/example02--usage-with-preParser-rt/entry.js"
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -17,7 +16,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.ajs$/,
-            loader: "node-async-require-loader?async=false&preParser=rt"
+            loader: "node-async-require-loader?preParser=rt"
         }]
     },
     plugins: [
