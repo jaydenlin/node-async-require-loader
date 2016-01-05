@@ -1,4 +1,4 @@
 module.exports = {
 	remoteUrl: "http://jaydenlin.github.io/fake-remote-contents-for-test/contents/react-template/",
-	localPath: './examples/example06--usage-with-local/test.txt'
+	localPath: './examples/example06--usage-with-local/local-content.txt'
 }
