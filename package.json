@@ -1,6 +1,6 @@
 {
   "name": "node-async-require-loader",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "description": "Transparently require() remote contents (node moudles) in webpack !",
   "main": "index.js",
   "scripts": {
@@ -31,9 +31,7 @@
     "lodash": "3.10.1",
     "mocha": "2.3.4",
     "react-templates": "0.3.2",
-    "sync-request": "2.1.0",
-    "watch": "0.17.1",
-    "watchfile-webpack-plugin": "0.0.4"
+    "sync-request": "2.1.0"
   },
   "devDependencies": {
     "react": "0.13.3",
