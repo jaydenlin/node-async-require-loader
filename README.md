@@ -312,7 +312,7 @@ module.exports=function(){ console.log("Hello World From Local"); }
 It's a node moudle.
 
 ##### Step 2. Set up the webpack.config.js
-We set up the config so that the loader will load the .ajs file and fetch the remote node moudle.
+We set up the config `?async=false` so that the loader will load the .ajs file and fetch the local node moudle via `localPath`.
 
 ```js
     module: {
@@ -323,7 +323,24 @@ We set up the config so that the loader will load the .ajs file and fetch the re
     }
 ```
 
-##### Step 3. Done
+##### Step 3. Live reload Settiing
+Because this module hijacks the webpack's build proccess, so the local file you used will not be watched by webpack. If you want to let your local file be watched and do live reload by webpack.
+You need to do the following settings.
+
+```
+npm install watchfile-webpack-plugin --save
+```
+
+```
+var watchFilePlugin = require("watchfile-webpack-plugin");
+...
+plugins: [
+        new watchFilePlugin({watchFolder: "./", watchExtension: "rt"})
+    ],
+...
+```
+
+##### Step 4. Done
 Then the webpack will get local file content and build the codes for you!
 You can see `examples/example06` and `examples/example07` in codes for more detials, it also work fine with react templates.
 
