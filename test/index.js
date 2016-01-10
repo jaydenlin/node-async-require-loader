@@ -56,9 +56,9 @@ describe('Test the built result of the remote content ', function() {
 
 	it('[example 08] when contents is the react template, should return correct js using the required .ajs file', function() {
 		this.timeout(50000);
-		rm('-rf', './examples/example08--usage-with-preParser-mutiple-rt/dist/');
-		exec('node node_modules/webpack/bin/webpack.js -p --config examples/example08--usage-with-preParser-mutiple-rt/webpack.config.js --content-base examples/example08--usage-with-preParser-mutiple-rt/');
-		var content = fs.readFileSync(path.join(__dirname, '../examples/example08--usage-with-preParser-mutiple-rt/dist/js/test.js'), {
+		rm('-rf', './examples/example08--usage-with-preParser-multiple-rt/dist/');
+		exec('node node_modules/webpack/bin/webpack.js -p --config examples/example08--usage-with-preParser-multiple-rt/webpack.config.js --content-base examples/example08--usage-with-preParser-multiple-rt/');
+		var content = fs.readFileSync(path.join(__dirname, '../examples/example08--usage-with-preParser-multiple-rt/dist/js/test.js'), {
 			encoding: "utf-8"
 		});
 		assert.notEqual(content.indexOf('e.exports.A=function(){return r.createElement("h3",{}," Hello World Form Web A ")}'), -1);
