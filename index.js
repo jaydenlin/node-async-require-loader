@@ -37,6 +37,9 @@
              case "rt":
                  preParser = require("./preParser/reactTemplate.js");
                  break;
+             case "mutipleRts":
+                 preParser = require("./preParser/mutipleReactTemplates.js");
+                 break;
              default:
                  preParser = function(rawContent) {
                      return rawContent;
