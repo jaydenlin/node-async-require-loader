@@ -58,7 +58,7 @@
          var res = requestSync('GET', nodeModuleUrl);
          var rawContent = res.getBody('utf8');
          var source;
-         if(preParser !=="undefined" && query.preParser === "multipleRts" && typeof(query.useUnescape)!=="undefined" && query.useUnescape){
+         if(typeof(query.useUnescape)!=="undefined" && query.useUnescape){
             source = preParser(rawContent, true);
          }else{
             source = preParser(rawContent);

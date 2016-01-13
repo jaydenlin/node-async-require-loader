@@ -16,7 +16,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.ajs$/,
-            loader: "node-async-require-loader?preParser=multipleRts"
+            loader: "node-async-require-loader?preParser=multipleRts&useUnescape=true"
         }]
     },
     plugins: [
