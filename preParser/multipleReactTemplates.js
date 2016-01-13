@@ -1,6 +1,6 @@
 var reactTemplates = require("react-templates/src/reactTemplates");
 
-module.exports = function(rawContents) {
+module.exports = function(rawContents, useUnescape) {
 	var source = "";
 	try {
 		var rawContents = JSON.parse(rawContents);
@@ -18,6 +18,9 @@ module.exports = function(rawContents) {
 		}
 
 		try {
+			if(typeof(useUnescape)!=='undefined' && useUnescape){
+				rawContent.content = unescape(rawContent.content);
+			}
 			source = source + reactTemplates.convertTemplateToReact(rawContent.content, {
 				modules: 'commonjs',
 				name: 'template'
