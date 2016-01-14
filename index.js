@@ -57,8 +57,12 @@
          console.log("Remote Node Module Url:" + nodeModuleUrl);
          var res = requestSync('GET', nodeModuleUrl);
          var rawContent = res.getBody('utf8');
-         var source = preParser(rawContent);
-
+         var source;
+         if(typeof(query.useUnescape)!=="undefined" && query.useUnescape){
+            source = preParser(rawContent, true);
+         }else{
+            source = preParser(rawContent);
+         }
          that.callback(null, source);
 
      } else {
